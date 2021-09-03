@@ -572,14 +572,31 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translate(0px, 70%);
-          transform: translate(0px, 70%);
+}
+
+.features__row div.features__card:nth-child(odd) {
+  -webkit-transform: translate(-100%, 20%);
+          transform: translate(-100%, 20%);
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-.features__row.active {
+.features__row div.features__card:nth-child(odd).active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+.features__row div.features__card:nth-child(even) {
+  -webkit-transform: translate(100%, 20%);
+          transform: translate(100%, 20%);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.features__row div.features__card:nth-child(even).active {
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   opacity: 1;

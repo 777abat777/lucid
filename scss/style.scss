@@ -391,12 +391,23 @@
 
 .features__row {
    display: flex;
-   transform: translate(0px, 70%);
-   opacity: 0;
-   transition: 1s;
-   &.active {
-      transform: translate(0px, 0px);
-      opacity: 1;
+   div.features__card:nth-child(odd) {
+      transform: translate(-100%, 20%);
+      opacity: 0;
+      transition: 1s;
+      &.active {
+         transform: translate(0px, 0px);
+         opacity: 1;
+      }
+   }
+   div.features__card:nth-child(even) {
+      transform: translate(100%, 20%);
+      opacity: 0;
+      transition: 1s;
+      &.active {
+         transform: translate(0px, 0px);
+         opacity: 1;
+      }
    }
 }
 .features__card {
